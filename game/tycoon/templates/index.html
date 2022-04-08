@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYCOON GAME</title>
+</head>
+<body class="divaso">
+    <style>form{
+    display: grid;
+    grid-auto-flow: column;
+    height: 80px;
+}
+
+body{
+    display: grid;
+    align-items: center;
+
+}
+
+p{font-size: 30px;}
+</style>
+    <p>Tycoon Game made in Blockchain.</p>
+    <p>You need to buy a Land to start playing, it costs 1 ether. You can only have 1 land at a time.<br>
+    Once you buy a Land, 100 coins are delivered to you as a gift.<br>
+    Collectors mine 1 coin per second.<br>
+    Collector multipliers multiply each Collector mining power by a factor of 2.<br>
+    Fetch button updates the current state of your land, displaying the new data on the screen.<br>
+    If you manage to have more than 100,000 coins, and 10 Collectors, then you win the game and 1 ether will be transferred to your account.</p>
+
+    <div class="div">
+        <form action="" method="post">
+            {% csrf_token %}
+            <button name="button" value="1">BUY LAND - 1 ETHER</button>
+            <button name="button" value="2">BUY COLLECTOR - 30 COINS</button>
+            <button name="button" value="3">BUY UPGRADE - 300 COINS</button>
+            <button name="button" value="4">FETCH</button>
+        </form>
+    </div>
+    <p>your ether balance: {{ action1 }}</p>
+    <p>your gold balance: {{ action2 }}</p>
+    <p>number of collectors: {{ action3 }}</p>
+    <p>collector multiplier: {{ action4 }}</p>
+    <p>{{ action5 }}</p>
+
+</body>
+</html>
